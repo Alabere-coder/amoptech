@@ -3,6 +3,7 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { sliderData } from "./slider/SliderData";
 import Image from 'next/image';
 import styles from '../styles/AutoSlide.module.css'
+import Banner from "./Banner";
 
 
 // interface AutoSlideProps {
@@ -45,33 +46,36 @@ const AutoSlider = () => {
     }, [currentSlide]);
 
     return (
-
-        <div className="slider__container">
-            <div className="slider">
-                <AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
-                <AiOutlineArrowRight className="arrow next" onClick={nextSlide} />
-                {sliderData.map((slide, index) => {
-                    return (
-                        <div
-                            className={index === currentSlide ? "slide current" : "slide"}
-                            key={index}
-                        >
-                            {index === currentSlide && (
-                                <div style={{  width: '800px', borderRadius: '10px', overflow: 'hidden', height: '500px', position:"relative"}}>
-                                    <Image src={slide.image} fill style={{objectFit:"cover"}} alt="slide" className={styles.image} />
-                                    <div className="content">
-                                        <h2>{slide.heading}</h2>
-                                        <p>{slide.desc}</p>
-                                        <hr />
-                                        <button className="btn btn-primary">Get Started</button>
+        <div className={styles.banner__container}>
+            <div className="slider__container">
+                <div className="slider">
+                    <AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
+                    <AiOutlineArrowRight className="arrow next" onClick={nextSlide} />
+                    {sliderData.map((slide, index) => {
+                        return (
+                            <div
+                                className={index === currentSlide ? "slide current" : "slide"}
+                                key={index}
+                            >
+                                {index === currentSlide && (
+                                    <div style={{  width: '800px', borderRadius: '10px', overflow: 'hidden', height: '500px', position:"relative"}}>
+                                        <Image src={slide.image} fill style={{objectFit:"cover"}} alt="slide" className={styles.image} />
+                                        <div className="content">
+                                            <h2>{slide.heading}</h2>
+                                            <p>{slide.desc}</p>
+                                            <hr />
+                                            <button className="btn btn-primary">Get Started</button>
+                                        </div>
                                     </div>
-                                </div>
-                            )}
-                        </div>
-                    );
-                })}
+                                )}
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
+            <Banner />
         </div>
+        
         
     );
 };

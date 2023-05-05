@@ -20,8 +20,7 @@ export default function Home() {
       <main>
         <Navbar />
         <div className={styles.description}>
-          
-          <h1>Welcome to Amoptech General Website</h1>
+          <h1 className='logo_1'>Welcome to Amoptech General Website</h1>
           <AutoSlider />
         </div>
       </main>

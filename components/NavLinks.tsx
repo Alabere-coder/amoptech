@@ -1,16 +1,17 @@
 
+import Link from 'next/link';
 
 const NavLinks = () => {
   return (
     <div>
       <div>
         <ul className="nav__list">
-          <li>Repaire Phone</li>
-          <li>Sell Phone</li>
-          <li>Buy Phone</li>
-          <li>Articles</li>
-          <li>About us</li>
-          <li>Terms & Condition</li>
+          <Link href="/"><li className="link">Repaire Phone</li></Link>
+          <Link href="/"><li className="link">Sell Phone</li></Link>
+          <Link href="/"><li className="link">Buy Phone</li></Link>
+          <Link href="/"><li className="link">Articles</li></Link>
+          <Link href="/"><li className="link">About us</li></Link>
+          <Link href="/"><li className="link">Terms & Condition</li></Link>
         </ul>
       </div>
     </div>

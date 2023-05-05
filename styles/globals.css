@@ -2,6 +2,15 @@ a {
     text-decoration: none;
     color: #4169e1;
 }
+
+.logo_1 {
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.link {
+    border-top: 3px solid red;
+}
 .nav__container {
     display: flex;
     align-items: center;
