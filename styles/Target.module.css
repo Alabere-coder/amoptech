@@ -1,0 +1,16 @@
+.btn {
+    display: flex;
+    align-items: center;
+    width: 5rem;
+    font-size: 20px;
+    border: none;
+    background: transparent;
+}
+
+.icon {
+    display: flex;
+}
+
+.sub {
+    padding-top: 3rem;
+}

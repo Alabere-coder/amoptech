@@ -10,7 +10,7 @@ const NavLinks = () => {
           <Link href="/"><li className="link">Sell Phone</li></Link>
           <Link href="/"><li className="link">Buy Phone</li></Link>
           <Link href="/"><li className="link">Articles</li></Link>
-          <Link href="/"><li className="link">About us</li></Link>
+          <Link href="/about/aboutUs"><li className="link">About us</li></Link>
           <Link href="/"><li className="link">Terms & Condition</li></Link>
         </ul>
       </div>
